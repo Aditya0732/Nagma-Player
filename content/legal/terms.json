@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "title": "Terms of Service | Nagma Player",
+    "description": "Terms of Service for the Nagma Player mobile application and related services."
+  },
+  "sections": [
+    {
+      "heading": "1. Acceptance of Terms",
+      "paragraphs": [
+        "By downloading, accessing, or using the Nagma Player application (hereinafter, “App”), you (“User”) agree to be bound by these Terms of Service (“Agreement”), our Privacy Policy, and any additional terms or future updates provided herein. If you do not agree, you must not access or use the App."
+      ]
+    },
+    {
+      "heading": "2. Parties Involved",
+      "paragraphs": ["This Agreement is between:"],
+      "bullets": [
+        {
+          "segments": [
+            { "type": "strong", "content": "\"Company\"" },
+            {
+              "type": "text",
+              "content": " – Refers to Nagma Player, owner and operator of the App."
+            }
+          ]
+        },
+        {
+          "segments": [
+            { "type": "strong", "content": "\"User\"" },
+            {
+              "type": "text",
+              "content": " – Any individual or entity accessing, using, or subscribing to the App."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "3. Service Description",
+      "paragraphs": ["The App provides:"],
+      "bullets": [
+        "Access to a curated or proprietary library of audio tracks;",
+        {
+          "segments": [
+            { "type": "text", "content": "Functionality for Users to " },
+            { "type": "strong", "content": "record and modify audio" },
+            {
+              "type": "text",
+              "content": ", including overlays or combinations with App content;"
+            }
+          ]
+        },
+        {
+          "segments": [
+            { "type": "text", "content": "Ability to " },
+            { "type": "strong", "content": "save, share" },
+            {
+              "type": "text",
+              "content": ", or otherwise use such recordings;"
+            }
+          ]
+        },
+        "Subscription-based access to features, governed by pricing and terms described within the App."
+      ]
+    },
+    {
+      "heading": "4. User-Generated Content (UGC)",
+      "bullets": [
+        {
+          "segments": [
+            {
+              "type": "text",
+              "content": "Any content (e.g., audio recordings) created using the App by the User may be "
+            },
+            {
+              "type": "strong",
+              "content": "used, licensed, modified, distributed, displayed, and monetized"
+            },
+            { "type": "text", "content": " by the Company." }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "type": "text",
+              "content": "By using the App and recording or uploading any content, the User "
+            },
+            { "type": "strong", "content": "irrevocably grants the Company" },
+            { "type": "text", "content": " a " },
+            {
+              "type": "strong",
+              "content": "worldwide, royalty-free, perpetual, sublicensable, transferable license"
+            },
+            {
+              "type": "text",
+              "content": " to use, reproduce, modify, distribute, and otherwise exploit such content in any media, for any purpose, including commercial."
+            }
+          ]
+        },
+        {
+          "segments": [
+            { "type": "text", "content": "The User " },
+            { "type": "strong", "content": "waives any moral rights" },
+            {
+              "type": "text",
+              "content": " or claims of authorship or attribution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "5. Ownership and Intellectual Property",
+      "bullets": [
+        {
+          "segments": [
+            {
+              "type": "text",
+              "content": "All App content, features, functionality, code, designs, audio assets (unless user-generated), and trademarks are the "
+            },
+            {
+              "type": "strong",
+              "content": "exclusive intellectual property of the Company"
+            },
+            { "type": "text", "content": "." }
+          ]
+        },
+        {
+          "segments": [
+            { "type": "text", "content": "Users are granted a " },
+            {
+              "type": "strong",
+              "content": "limited, non-exclusive, revocable, non-transferable"
+            },
+            {
+              "type": "text",
+              "content": " license to use the App in accordance with this Agreement."
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "type": "strong",
+              "content": "Reverse engineering, copying, distributing, reselling, or creating derivative works"
+            },
+            {
+              "type": "text",
+              "content": " based on the App or its content is strictly prohibited."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "6. Subscriptions & Payments",
+      "bullets": [
+        "Subscription plans are offered on a recurring basis (monthly, annually, etc.), billed in advance.",
+        "By subscribing, the User agrees to recurring charges until canceled.",
+        "No refunds will be issued unless required under applicable consumer protection laws."
+      ]
+    },
+    {
+      "heading": "7. User Obligations & Restrictions",
+      "paragraphs": ["Users agree NOT to:"],
+      "bullets": [
+        "Use the App for unlawful, abusive, or defamatory purposes;",
+        "Record or share content that infringes third-party rights or violates any applicable laws;",
+        "Attempt to hack, disrupt, or reverse engineer the App;",
+        "Share account credentials or use another person’s account;",
+        "Misrepresent identity or attempt to deceive the Company or other users."
+      ]
+    },
+    {
+      "heading": "8. Disclaimers",
+      "bullets": [
+        {
+          "segments": [
+            { "type": "strong", "content": "No Warranties" },
+            {
+              "type": "text",
+              "content": ": The App is provided “AS IS” without warranties of any kind, including merchantability, fitness for a particular purpose, or non-infringement."
+            }
+          ]
+        },
+        {
+          "segments": [
+            { "type": "strong", "content": "No Guarantee of User Satisfaction" },
+            {
+              "type": "text",
+              "content": ": The Company makes no guarantees regarding the user experience, reliability, performance, or availability of the App or its features."
+            }
+          ]
+        },
+        {
+          "segments": [
+            { "type": "strong", "content": "Third-Party Claims" },
+            {
+              "type": "text",
+              "content": ": The Company is not liable for any content created by users that infringes the rights of any third parties."
+            }
+          ]
+        },
+        {
+          "segments": [
+            { "type": "strong", "content": "No Liability for Indirect Damage" },
+            {
+              "type": "text",
+              "content": ": The Company shall not be liable for any indirect, incidental, consequential, or special damages, including loss of revenue or data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "9. Limitation of Liability",
+      "paragraphs": ["To the maximum extent permitted under applicable law:"],
+      "bullets": [
+        {
+          "segments": [
+            { "type": "strong", "content": "Total liability" },
+            {
+              "type": "text",
+              "content": " of the Company for any claim shall not exceed the "
+            },
+            { "type": "strong", "content": "amount paid by the User" },
+            {
+              "type": "text",
+              "content": " (if any) in the preceding 12 months."
+            }
+          ]
+        },
+        {
+          "segments": [
+            { "type": "text", "content": "The Company is " },
+            { "type": "strong", "content": "not liable for damages arising from" },
+            {
+              "type": "text",
+              "content": ": system failures, force majeure, user misuse, data loss, device incompatibility, downtime, or third-party services."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "10. Data Collection & Analytics",
+      "bullets": [
+        "The App collects user data including (but not limited to): screen time, interaction data, app behavior, location (if permitted), and recording behavior.",
+        {
+          "segments": [
+            { "type": "text", "content": "This data is used for:" }
+          ],
+          "subitems": [
+            "App performance improvement;",
+            "Analytics;",
+            "User experience optimization;",
+            "Development of new features;",
+            "Internal research and marketing."
+          ]
+        },
+        {
+          "segments": [
+            { "type": "text", "content": "By using the App, the User " },
+            { "type": "strong", "content": "consents" },
+            {
+              "type": "text",
+              "content": " to such data collection and processing in accordance with the Company’s Privacy Policy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "11. Technology & IP Indemnity",
+      "bullets": [
+        "The Company does not warrant that its technology is free from all defects or claims by third parties.",
+        {
+          "segments": [
+            {
+              "type": "text",
+              "content": "In the event of a copyright or IP claim by a third party, the User agrees to "
+            },
+            { "type": "strong", "content": "indemnify and hold harmless" },
+            {
+              "type": "text",
+              "content": " the Company from all liabilities, damages, and legal fees resulting from the User’s misuse or unauthorized reproduction/distribution of App content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "12. Termination",
+      "paragraphs": [
+        "The Company may suspend or terminate any account at its sole discretion if:"
+      ],
+      "bullets": [
+        "The User violates any provision of this Agreement;",
+        "There is suspicion of fraudulent or abusive activity;",
+        "Required by law or regulatory authority."
+      ]
+    },
+    {
+      "paragraphs": [
+        "No refunds will be issued upon termination for violation of terms."
+      ]
+    },
+    {
+      "heading": "13. Governing Law & Jurisdiction",
+      "paragraphs": [
+        "This Agreement shall be governed by the laws of the Republic of India. All disputes shall be resolved exclusively in the courts of competent jurisdiction at Mumbai, Maharashtra, India."
+      ]
+    },
+    {
+      "heading": "14. Force Majeure",
+      "paragraphs": [
+        "The Company is not liable for any failure or delay due to causes beyond its reasonable control, including but not limited to natural disasters, network failures, cyberattacks, governmental restrictions, or pandemics."
+      ]
+    },
+    {
+      "heading": "15. Changes to Terms",
+      "paragraphs": [
+        "The Company may update these terms at any time. Continued use of the App after such changes constitutes acceptance."
+      ]
+    },
+    {
+      "heading": "16. Contact",
+      "paragraphs": [
+        "For legal notices or inquiries:",
+        {
+          "segments": [
+            { "type": "strong", "content": "Email:" },
+            { "type": "text", "content": " " },
+            {
+              "type": "link",
+              "label": "nagmaplayer@gmail.com",
+              "href": "mailto:nagmaplayer@gmail.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "17. Entire Agreement",
+      "paragraphs": [
+        {
+          "segments": [
+            {
+              "type": "text",
+              "content": "This Agreement, along with the Privacy Policy and Subscription Terms (if any), constitutes the "
+            },
+            { "type": "strong", "content": "entire agreement" },
+            {
+              "type": "text",
+              "content": " between the parties and supersedes all prior agreements or understandings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "18. Severability",
+      "paragraphs": [
+        "If any provision of this Agreement is held to be invalid, illegal, or unenforceable, the remaining provisions shall remain in full force and effect."
+      ]
+    }
+  ]
+}

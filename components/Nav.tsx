@@ -1,8 +1,14 @@
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Music, Menu, X } from "lucide-react";
 import { useState } from "react";
+import type { HomepageContent } from "@/lib/content-schema";
 
-const Nav = () => {
+type NavData = HomepageContent["nav"];
+
+const getStoreIcon = (icon: "apple" | "google") =>
+  icon === "apple" ? "/apple.svg" : "/google.svg";
+
+const Nav = ({ data, brandByline }: { data: NavData; brandByline: string }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
@@ -11,16 +17,12 @@ const Nav = () => {
     setIsScrolled(latest > 50);
   });
 
-  const navItems = [
-    { label: "Features", href: "#features" },
-    { label: "How it Works", href: "#how-it-works" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Pricing", href: "#pricing" },
-  ];
+  const navItems = data.items;
+  const [primaryStoreButton, secondaryStoreButton] = data.storeButtons;
 
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ) => {
     e.preventDefault();
     const element = document.querySelector(href);
@@ -61,14 +63,20 @@ const Nav = () => {
               }}
             >
               <motion.div
-                className="w-8 h-8 md:w-9 md:h-9 rounded-xl bg-gradient-to-br from-primary via-primary to-accent flex items-center justify-center shadow-md shadow-primary/20"
+                className="w-8 h-8 md:w-9 md:h-9 shrink-0 rounded-xl bg-linear-to-br from-primary-fill via-primary-fill to-accent flex items-center justify-center shadow-md shadow-primary/15"
                 whileHover={{ rotate: 12, scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Music className="w-4 h-4 md:w-5 md:h-5 text-white" />
               </motion.div>
-              <span className="font-bold tracking-tight">
-                Nagma <span className="text-primary">Player</span>
+              <span className="flex flex-col items-start leading-tight">
+                <span className="font-bold tracking-tight">
+                  {data.brandPrefix}{" "}
+                  <span className="text-primary">{data.brandHighlight}</span>
+                </span>
+                <span className="mt-0.5 text-[12px] font-normal text-muted-foreground md:text-[13px]">
+                  {brandByline}
+                </span>
               </span>
             </motion.a>
 
@@ -98,43 +106,45 @@ const Nav = () => {
               className="hidden md:flex items-center gap-2"
             >
               <motion.a
-                href="#"
+                href={primaryStoreButton.href}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="block"
               >
                 <div className="bg-black hover:bg-black/90 rounded-lg px-3 py-1.5 flex items-center gap-2 transition-all duration-200 border border-gray-700">
                   <img
-                    src="/apple.svg"
-                    alt="Apple"
+                    src={getStoreIcon(primaryStoreButton.icon)}
+                    alt={primaryStoreButton.iconAlt}
                     className="w-5 h-5 invert"
                   />
                   <div className="flex flex-col items-start leading-none">
                     <span className="text-[8px] text-gray-300">
-                      Download on the
+                      {primaryStoreButton.preLabel}
                     </span>
                     <span className="text-[11px] font-semibold text-white">
-                      App Store
+                      {primaryStoreButton.label}
                     </span>
                   </div>
                 </div>
               </motion.a>
               <motion.a
-                href="#"
+                href={secondaryStoreButton.href}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="block"
               >
                 <div className="bg-gray-100 hover:bg-gray-200 rounded-lg px-3 py-1.5 flex items-center gap-2 transition-all duration-200 border border-gray-200">
                   <img
-                    src="/google.svg"
-                    alt="Google Play"
+                    src={getStoreIcon(secondaryStoreButton.icon)}
+                    alt={secondaryStoreButton.iconAlt}
                     className="w-5 h-5"
                   />
                   <div className="flex flex-col items-start leading-none">
-                    <span className="text-[8px] text-gray-800">GET IT ON</span>
+                    <span className="text-[8px] text-gray-800">
+                      {secondaryStoreButton.preLabel}
+                    </span>
                     <span className="text-[11px] font-semibold text-gray-800">
-                      Google Play
+                      {secondaryStoreButton.label}
                     </span>
                   </div>
                 </div>
@@ -184,34 +194,36 @@ const Nav = () => {
               </motion.a>
             ))}
             <div className="pt-3 border-t border-primary/10 flex gap-2">
-              <a href="#" className="flex-1">
+              <a href={primaryStoreButton.href} className="flex-1">
                 <div className="bg-black rounded-lg px-3 py-2 flex items-center justify-center gap-2 border border-gray-700">
                   <img
-                    src="/apple.svg"
-                    alt="Apple"
+                    src={getStoreIcon(primaryStoreButton.icon)}
+                    alt={primaryStoreButton.iconAlt}
                     className="w-5 h-5 invert"
                   />
                   <div className="flex flex-col items-start leading-none">
                     <span className="text-[8px] text-gray-300">
-                      Download on the
+                      {primaryStoreButton.preLabel}
                     </span>
                     <span className="text-[11px] font-semibold text-white">
-                      App Store
+                      {primaryStoreButton.label}
                     </span>
                   </div>
                 </div>
               </a>
-              <a href="#" className="flex-1">
+              <a href={secondaryStoreButton.href} className="flex-1">
                 <div className="bg-black rounded-lg px-3 py-2 flex items-center justify-center gap-2 border border-gray-700">
                   <img
-                    src="/google.svg"
-                    alt="Google Play"
+                    src={getStoreIcon(secondaryStoreButton.icon)}
+                    alt={secondaryStoreButton.iconAlt}
                     className="w-5 h-5"
                   />
                   <div className="flex flex-col items-start leading-none">
-                    <span className="text-[8px] text-gray-300">GET IT ON</span>
+                    <span className="text-[8px] text-gray-300">
+                      {secondaryStoreButton.preLabel}
+                    </span>
                     <span className="text-[11px] font-semibold text-white">
-                      Google Play
+                      {secondaryStoreButton.label}
                     </span>
                   </div>
                 </div>
