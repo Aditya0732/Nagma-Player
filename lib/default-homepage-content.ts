@@ -46,8 +46,8 @@ export const defaultHomepageContent: HomepageContent = {
     headlinePrefix: "The most authentic",
     headlineHighlight: "Nagma Riyaz companion",
     description:
-      "Practise and innovate with 500+ authentic Nagmas across 100+ Raags. Crafted for Tabla, Pakhawaj, Kathak, Vocalists, String Instrumentalists, and Percussionists.",
-    image: {
+      "Practice and innovate with 500+ authentic Nagma/Lehra composed across 15+ taals and 100+ raags in our app. Thoughtfully crafted for tabla players, pakhawaj artists, Kathak dancers, percussionists, and rhythm enthusiasts.",
+      image: {
       src: "/hero/hero_full.png",
       alt: "Akaal Creation App Interface",
     },
