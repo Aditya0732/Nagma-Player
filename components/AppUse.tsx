@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
@@ -24,9 +24,22 @@ const arcBaseY = (index: number, total: number) => {
   return 0;
 };
 
+function useMinWidthSm() {
+  return useSyncExternalStore(
+    (onChange) => {
+      const mq = window.matchMedia("(min-width: 640px)");
+      mq.addEventListener("change", onChange);
+      return () => mq.removeEventListener("change", onChange);
+    },
+    () => window.matchMedia("(min-width: 640px)").matches,
+    () => false,
+  );
+}
+
 const AppUse = ({ data }: { data: AppUseData }) => {
   const [active, setActive] = useState(0);
   const n = data.tabs.length;
+  const isSmUp = useMinWidthSm();
 
   return (
     <section
@@ -72,7 +85,7 @@ const AppUse = ({ data }: { data: AppUseData }) => {
           aria-labelledby={`app-use-tab-${active}`}
           aria-live="polite"
         >
-          <div className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2 px-3 sm:left-auto sm:w-full sm:max-w-[min(100%,1120px)] sm:translate-x-0 sm:px-0">
+          <div className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2 px-0 sm:left-auto sm:w-full sm:max-w-[min(100%,1120px)] sm:translate-x-0 sm:px-0">
             {/* KEY FIX: no min-h on mobile — image drives height naturally */}
             <div className="relative w-full sm:min-h-[min(64vh,720px)]">
               {data.tabs.map((tab, index) => {
@@ -82,7 +95,7 @@ const AppUse = ({ data }: { data: AppUseData }) => {
                     key={tab.image.src}
                     // KEY FIX: relative flow on mobile so image takes full natural size,
                     // absolute only on sm+ for the layered crossfade effect
-                    className="flex items-center justify-center px-0.5 sm:absolute sm:inset-0 sm:px-0"
+                    className="flex items-center justify-center px-0 sm:absolute sm:inset-0 sm:px-0"
                     style={{
                       // on mobile: hide non-active by collapsing to absolute+inset-0
                       position: !isShown ? "absolute" : undefined,
@@ -102,7 +115,7 @@ const AppUse = ({ data }: { data: AppUseData }) => {
                       height={2130}
                       // KEY FIX: no max-h constraint on mobile — image fills full width naturally
                       className="h-auto w-full object-contain [image-rendering:auto] drop-shadow-[0_24px_60px_-16px_rgba(15,23,42,0.18)] sm:max-h-[min(92vh,1020px)]"
-                      sizes="(max-width: 640px) calc(100vw - 1.5rem), (max-width: 1280px) 95vw, 1120px"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 95vw, 1120px"
                       priority={index === 0}
                     />
                   </motion.div>
@@ -115,7 +128,7 @@ const AppUse = ({ data }: { data: AppUseData }) => {
         {/* FIX: mt-0 on mobile to close the gap */}
         <div className="relative mx-auto mt-0 w-full max-w-2xl md:mt-2">
           <svg
-            className="pointer-events-none absolute left-1/2 top-0.5 z-0 h-12 w-[min(100%,24rem)] -translate-x-1/2 text-zinc-300/90 md:top-0 md:h-14 md:w-[min(100%,28rem)]"
+            className="pointer-events-none absolute left-1/2 top-0.5 z-0 h-9 w-[min(100%,18rem)] -translate-x-1/2 text-zinc-300/90 sm:h-12 sm:w-[min(100%,24rem)] md:top-0 md:h-14 md:w-[min(100%,28rem)]"
             viewBox="0 0 420 52"
             fill="none"
             aria-hidden
@@ -130,7 +143,7 @@ const AppUse = ({ data }: { data: AppUseData }) => {
           </svg>
 
           <div
-            className="relative z-10 flex items-end justify-center gap-7 pt-1 sm:gap-10 sm:pt-0 md:gap-14"
+            className="relative z-10 flex items-end justify-center gap-4 pt-1 sm:gap-10 sm:pt-0 md:gap-14"
             role="tablist"
             aria-label="App screens"
           >
@@ -138,8 +151,8 @@ const AppUse = ({ data }: { data: AppUseData }) => {
               const Icon = iconMap[tab.icon];
               const isActive = active === index;
               const baseY = arcBaseY(index, n);
-              const activeLift = isActive ? -10 : 0;
-              const scale = isActive ? 1.08 : 1;
+              const activeLift = isActive ? (isSmUp ? -10 : -6) : 0;
+              const scale = isActive ? (isSmUp ? 1.08 : 1.05) : 1;
 
               return (
                 <button
@@ -150,7 +163,7 @@ const AppUse = ({ data }: { data: AppUseData }) => {
                   aria-controls="app-use-panel"
                   id={`app-use-tab-${index}`}
                   onClick={() => setActive(index)}
-                  className="flex flex-col items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  className="flex flex-col items-center gap-1.5 sm:gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                   style={{
                     transform: `translateY(${baseY + activeLift}px) scale(${scale})`,
                     transition:
@@ -160,22 +173,22 @@ const AppUse = ({ data }: { data: AppUseData }) => {
                   <span
                     className={`flex items-center justify-center rounded-full transition-[box-shadow,background-color,border-color,color] duration-300 ${
                       isActive
-                        ? "h-14 w-14 border-0 bg-primary-fill text-primary-fill-foreground shadow-[0_10px_22px_-4px_rgba(56,150,190,0.22)] sm:h-15 sm:w-15"
-                        : "h-12 w-12 border border-zinc-300/95 bg-white text-zinc-800 shadow-[0_2px_8px_rgba(15,23,42,0.07),inset_0_1px_0_0_rgba(255,255,255,0.95)] sm:h-14 sm:w-14 hover:border-zinc-400/90"
+                        ? "h-10 w-10 border-0 bg-primary-fill text-primary-fill-foreground shadow-[0_8px_18px_-4px_rgba(56,150,190,0.22)] sm:h-[3.75rem] sm:w-[3.75rem] sm:shadow-[0_10px_22px_-4px_rgba(56,150,190,0.22)]"
+                        : "h-9 w-9 border border-zinc-300/95 bg-white text-zinc-800 shadow-[0_2px_8px_rgba(15,23,42,0.07),inset_0_1px_0_0_rgba(255,255,255,0.95)] sm:h-14 sm:w-14 hover:border-zinc-400/90"
                     }`}
                   >
                     <Icon
                       className={
                         isActive
-                          ? "h-5 w-5 text-white sm:h-6 sm:w-6"
-                          : "h-5 w-5 sm:h-[1.35rem] sm:w-[1.35rem]"
+                          ? "h-4 w-4 text-white sm:h-6 sm:w-6"
+                          : "h-3.5 w-3.5 sm:h-[1.35rem] sm:w-[1.35rem]"
                       }
                       strokeWidth={isActive ? 2.35 : 2}
                       aria-hidden
                     />
                   </span>
                   <span
-                    className={`text-center font-sans text-[10px] font-semibold uppercase leading-tight tracking-[0.14em] sm:text-[11px] sm:tracking-[0.17em] ${
+                    className={`text-center font-sans text-[9px] font-semibold uppercase leading-tight tracking-[0.12em] sm:text-[11px] sm:tracking-[0.17em] ${
                       isActive ? "text-primary" : "text-zinc-500"
                     }`}
                   >
