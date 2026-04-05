@@ -24,6 +24,14 @@ const arcBaseY = (index: number, total: number) => {
   return 0;
 };
 
+/** Intrinsic PNG size per asset — must match files in /public/appuse for correct layout/aspect. */
+const APP_USE_IMAGE_DIMS: Record<string, { width: number; height: number }> = {
+  "/appuse/app_use_1.png": { width: 6750, height: 4408 },
+  "/appuse/app_use_2.png": { width: 6526, height: 4347 },
+  "/appuse/app_use_3.png": { width: 7173, height: 4349 },
+};
+
+
 function useMinWidthSm() {
   return useSyncExternalStore(
     (onChange) => {
@@ -66,7 +74,7 @@ const AppUse = ({ data }: { data: AppUseData }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-4 text-center md:mb-5"
+          className="relative z-20 mb-4 text-center md:mb-5"
         >
           <h2 className="text-balance text-3xl font-bold tracking-[0.02em] text-foreground sm:text-4xl md:text-[2.5rem] md:leading-tight">
             {data.title}
@@ -86,16 +94,24 @@ const AppUse = ({ data }: { data: AppUseData }) => {
           aria-live="polite"
         >
           <div className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2 px-0 sm:left-auto sm:w-full sm:max-w-[min(100%,1120px)] sm:translate-x-0 sm:px-0">
-            {/* KEY FIX: no min-h on mobile — image drives height naturally */}
-            <div className="relative w-full sm:min-h-[min(64vh,720px)]">
+            {/*
+              Mobile: natural image height. sm+: capped width + aspect box so cropped PNGs
+              (landscape canvas) do not blow up to full column width and overlap the heading.
+            */}
+            <div className="relative w-full min-h-0 sm:mx-auto sm:max-w-[min(100%,520px)] sm:overflow-hidden sm:aspect-[6750/4408] md:max-w-[540px] lg:max-w-[580px]">
               {data.tabs.map((tab, index) => {
                 const isShown = active === index;
+                const dims =
+                  APP_USE_IMAGE_DIMS[tab.image.src] ?? {
+                    width: 6750,
+                    height: 4408,
+                  };
                 return (
                   <motion.div
                     key={tab.image.src}
                     // KEY FIX: relative flow on mobile so image takes full natural size,
                     // absolute only on sm+ for the layered crossfade effect
-                    className="flex items-center justify-center px-0 sm:absolute sm:inset-0 sm:px-0"
+                    className="flex min-h-0 items-center justify-center px-0 sm:absolute sm:inset-0 sm:px-0"
                     style={{
                       // on mobile: hide non-active by collapsing to absolute+inset-0
                       position: !isShown ? "absolute" : undefined,
@@ -111,11 +127,10 @@ const AppUse = ({ data }: { data: AppUseData }) => {
                     <Image
                       src={tab.image.src}
                       alt={tab.image.alt}
-                      width={1200}
-                      height={2130}
-                      // KEY FIX: no max-h constraint on mobile — image fills full width naturally
-                      className="h-auto w-full object-contain [image-rendering:auto] drop-shadow-[0_24px_60px_-16px_rgba(15,23,42,0.18)] sm:max-h-[min(92vh,1020px)]"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 95vw, 1120px"
+                      width={dims.width}
+                      height={dims.height}
+                      className="h-auto w-full object-contain [image-rendering:auto] drop-shadow-[0_24px_60px_-16px_rgba(15,23,42,0.18)] sm:h-full sm:w-full sm:max-h-full sm:max-w-full"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 520px, 580px"
                       priority={index === 0}
                     />
                   </motion.div>
