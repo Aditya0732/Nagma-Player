@@ -17,8 +17,8 @@ export const defaultHomepageContent: HomepageContent = {
     footer: true,
   },
   nav: {
-    brandPrefix: "Nagma",
-    brandHighlight: "Player",
+    brandPrefix: "Akaal",
+    brandHighlight: "Creation",
     items: [
       { label: "Features", href: "#features", section: "features" },
       { label: "How it Works", href: "#how-it-works", section: "userguide" },
@@ -48,8 +48,8 @@ export const defaultHomepageContent: HomepageContent = {
     description:
       "Practise and innovate with 500+ authentic Nagmas across 100+ Raags. Crafted for Tabla, Pakhawaj, Kathak, Vocalists, String Instrumentalists, and Percussionists.",
     image: {
-      src: "/hero/hero_full.jpeg",
-      alt: "Nagma Player App Interface",
+      src: "/hero/hero_full.png",
+      alt: "Akaal Creation App Interface",
     },
     storeButtons: [
       {
@@ -331,24 +331,24 @@ export const defaultHomepageContent: HomepageContent = {
     trustText: "Free to start • No ads • Cancel anytime",
   },
   footer: {
-    brandPrefix: "Nagma",
-    brandHighlight: "Player",
+    brandPrefix: "Akaal",
+    brandHighlight: "Creation",
     tagline: "Your perfect Riyaz companion",
     social: [
       {
         icon: "instagram",
         href: "https://www.instagram.com/nagmaplayer?igsh=ZHc3amg5NGw4eWc=&utm_source=ig_contact_invite",
-        label: "Nagma Player on Instagram",
+        label: "Akaal Creation on Instagram",
       },
       {
         icon: "youtube",
         href: "https://youtube.com/@nagmaplayer?si=MYOBf_hGQGCn8hwC",
-        label: "Nagma Player on YouTube",
+        label: "Akaal Creation on YouTube",
       },
       {
         icon: "whatsapp",
         href: "https://wa.me/919226752779",
-        label: "Contact Nagma Player on WhatsApp",
+        label: "Contact Akaal Creation on WhatsApp",
       },
     ],
     sections: [
@@ -364,8 +364,8 @@ export const defaultHomepageContent: HomepageContent = {
         title: "Company",
         links: [
           {
-            label: "nagmaplayer@gmail.com",
-            href: "mailto:nagmaplayer@gmail.com",
+            label: "akaalcreation.support@gmail.com",
+            href: "mailto:akaalcreation.support@gmail.com",
           },
         ],
       },
@@ -376,11 +376,11 @@ export const defaultHomepageContent: HomepageContent = {
           { label: "Terms", href: "/terms" },
           {
             label: "Support",
-            href: "mailto:nagmaplayer@gmail.com?subject=Nagma%20Player%20Support",
+            href: "mailto:akaalcreation.support@gmail.com?subject=Akaal%20Creation%20Support",
           },
         ],
       },
     ],
-    copyright: "© 2026 Nagma Player. All rights reserved.",
+    copyright: "© 2026 Akaal Creation. All rights reserved.",
   },
 };

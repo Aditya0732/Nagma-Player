@@ -74,9 +74,9 @@ const Nav = ({ data, brandByline }: { data: NavData; brandByline: string }) => {
                   {data.brandPrefix}{" "}
                   <span className="text-primary">{data.brandHighlight}</span>
                 </span>
-                <span className="mt-0.5 text-[12px] font-normal text-muted-foreground md:text-[13px]">
+                {/* <span className="mt-0.5 text-[12px] font-normal text-muted-foreground md:text-[13px]">
                   {brandByline}
-                </span>
+                </span> */}
               </span>
             </motion.a>
 

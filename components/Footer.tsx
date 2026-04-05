@@ -81,7 +81,7 @@ const Footer = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="mb-4 flex items-start gap-2">
+            <div className="mb-4 flex items-center gap-2">
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-primary-fill to-accent">
                 <Music className="h-5 w-5 text-white" />
               </div>
@@ -90,7 +90,7 @@ const Footer = ({
                   {data.brandPrefix}{" "}
                   <span className="text-primary">{data.brandHighlight}</span>
                 </div>
-                <p className="mt-1 text-xs text-muted-foreground">{brandByline}</p>
+                {/* <p className="mt-1 text-xs text-muted-foreground">{brandByline}</p> */}
               </div>
             </div>
             <p className="text-sm text-muted-foreground">{data.tagline}</p>
