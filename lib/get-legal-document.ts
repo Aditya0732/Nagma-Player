@@ -16,9 +16,9 @@ function legalDocumentsDir(): string {
 const FALLBACK: Record<LegalDocumentSlug, LegalPage> = {
   privacy: {
     meta: {
-      title: "Privacy Policy | Nagma Player",
+      title: "Privacy Policy | Akaal Creation",
       description:
-        "How Nagma Player collects, uses, stores, and protects information when you use our app and services.",
+        "How Akaal Creation collects, uses, stores, and protects information when you use our app and services.",
     },
     sections: [
       {
@@ -30,9 +30,9 @@ const FALLBACK: Record<LegalDocumentSlug, LegalPage> = {
   },
   terms: {
     meta: {
-      title: "Terms of Service | Nagma Player",
+      title: "Terms of Service | Akaal Creation",
       description:
-        "Terms of Service for the Nagma Player mobile application and related services.",
+        "Terms of Service for the Akaal Creation mobile application and related services.",
     },
     sections: [
       {

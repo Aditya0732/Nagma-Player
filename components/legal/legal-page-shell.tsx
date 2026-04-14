@@ -21,8 +21,8 @@ export function LegalPageShell({
               <Music className="h-5 w-5 text-primary-fill-foreground" />
             </span>
             <span>
-              Nagma{" "}
-              <span className="text-primary">Player</span>
+              Akaal{" "}
+              <span className="text-primary">Creation</span>
             </span>
           </Link>
           <Link
