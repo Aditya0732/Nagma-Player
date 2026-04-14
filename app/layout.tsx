@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Akaal Creation - Digital Lehra & Nagma Companion",
+  title: "Nagma Player - Digital Lehra & Nagma Companion",
   description:
     "The most authentic digital Lehra & Nagma companion for intermediate and expert musicians. Practice tabla, harmonium, sarangi, santoor, and classical instruments with 500+ nagmas across 100+ raags.",
-  generator: "Akaal Creation",
+  generator: "Nagma Player",
   icons: {
     icon: [
       {

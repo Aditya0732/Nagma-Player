@@ -25,10 +25,10 @@ export const homepageContentSchema = z.object({
   version: z.string().min(1),
   updatedAt: z.string().min(1),
   visibility: visibilitySchema,
-  /** Shown under the product name in the nav and footer (e.g. “by Akaal Creation”). */
+  /** Shown under the product name in the nav and footer (e.g. “by Nagma Player”). */
   brandByline: z.string().min(1),
   nav: z.object({
-    brandPrefix: z.string().min(1),
+    brandPrefix: z.string().min(1), 
     brandHighlight: z.string().min(1),
     items: z.array(
       z.object({

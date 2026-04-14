@@ -3,7 +3,7 @@ import type { HomepageContent } from "@/lib/content-schema";
 export const defaultHomepageContent: HomepageContent = {
   "version": "1.0.0",
   "updatedAt": "2026-03-23T00:00:00.000Z",
-  "brandByline": "by Akaal Creation",
+  "brandByline": "by Nagma Player",
   "visibility": {
     "nav": true,
     "hero": true,
@@ -17,8 +17,8 @@ export const defaultHomepageContent: HomepageContent = {
     "footer": true
   },
   "nav": {
-    "brandPrefix": "Akaal",
-    "brandHighlight": "Creation",
+    "brandPrefix": "Nagma",
+    "brandHighlight": "Player",
     "items": [
       { "label": "Features", "href": "#features", "section": "features" },
       {
@@ -56,7 +56,7 @@ export const defaultHomepageContent: HomepageContent = {
     "description": "Practice and innovate with 500+ authentic Nagma/Lehra composed across 15+ taals and 100+ raags in our app. Thoughtfully crafted for tabla players, pakhawaj artists, Kathak dancers, percussionists, and rhythm enthusiasts.",
     "image": {
       "src": "/hero/hero_full.png",
-      "alt": "Akaal Creation App Interface"
+      "alt": "Nagma Player App Interface"
     },
     "storeButtons": [
       {
@@ -318,24 +318,24 @@ export const defaultHomepageContent: HomepageContent = {
     "trustText": "Free to start • No ads • Cancel anytime"
   },
   "footer": {
-    "brandPrefix": "Akaal",
-    "brandHighlight": "Creation",
+    "brandPrefix": "Nagma",
+    "brandHighlight": "Player",
     "tagline": "Your perfect Riyaz companion",
     "social": [
       {
         "icon": "instagram",
         "href": "https://www.instagram.com/nagmaplayer?igsh=ZHc3amg5NGw4eWc=&utm_source=ig_contact_invite",
-        "label": "Akaal Creation on Instagram"
+        "label": "Nagma Player on Instagram"
       },
       {
         "icon": "youtube",
         "href": "https://youtube.com/@nagmaplayer?si=MYOBf_hGQGCn8hwC",
-        "label": "Akaal Creation on YouTube"
+        "label": "Nagma Player on YouTube"
       },
       {
         "icon": "whatsapp",
         "href": "https://wa.me/919226752779",
-        "label": "Contact Akaal Creation on WhatsApp"
+        "label": "Contact Nagma Player on WhatsApp"
       }
     ],
     "sections": [
@@ -351,8 +351,8 @@ export const defaultHomepageContent: HomepageContent = {
         "title": "Company",
         "links": [
           {
-            "label": "akaalcreation.support@gmail.com",
-            "href": "mailto:akaalcreation.support@gmail.com"
+            "label": "nagmaplayer@gmail.com",
+            "href": "mailto:nagmaplayer@gmail.com"
           }
         ]
       },
@@ -363,12 +363,13 @@ export const defaultHomepageContent: HomepageContent = {
           { "label": "Terms", "href": "/terms" },
           {
             "label": "Support",
-            "href": "mailto:akaalcreation.support@gmail.com?subject=Akaal%20Creation%20Support"
+            "href": "mailto:nagmaplayer@gmail.com?subject=Nagma%20Player%20Support"
           }
         ]
       }
     ],
-    "copyright": "© 2026 Akaal Creation. All rights reserved."
+    "copyright": "© 2026 Nagma Player. All rights reserved."
   }
-};
+}
+
 
