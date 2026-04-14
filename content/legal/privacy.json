@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Privacy Policy | Akaal Creation",
-    "description": "How Akaal Creation collects, uses, stores, and protects information when you use our app and services."
+    "title": "Privacy Policy | Nagma Player",
+    "description": "How Nagma Player collects, uses, stores, and protects information when you use our app and services."
   },
   "sections": [
     {
       "paragraphs": [
-        "This Privacy Policy describes how Akaal Creation (“Company”, “we”, “our”, or “us”) collects, uses, stores, and protects information when users (“you” or “your”) access or use the Akaal Creation mobile application, website, or any related services (collectively referred to as the “Service”). The Service is designed to support the practice of Hindustani classical music by providing studio-recorded nagma accompaniment tracks and tools that allow users to track and monitor their riyaaz or practice sessions.",
+        "This Privacy Policy describes how Nagma Player (“Company”, “we”, “our”, or “us”) collects, uses, stores, and protects information when users (“you” or “your”) access or use the Nagma Player mobile application, website, or any related services (collectively referred to as the “Service”). The Service is designed to support the practice of Hindustani classical music by providing studio-recorded nagma accompaniment tracks and tools that allow users to track and monitor their riyaaz or practice sessions.",
         "By creating an account, accessing, or using the Service, you acknowledge that you have read, understood, and agreed to the practices described in this Privacy Policy. If you do not agree with this Privacy Policy, you should discontinue use of the Service."
       ]
     },
@@ -110,7 +110,7 @@
         {
           "segments": [
             { "type": "strong", "content": "Company Name:" },
-            { "type": "text", "content": " Akaal Creation" }
+            { "type": "text", "content": " Nagma Player" }
           ]
         },
         "By using the Service, you acknowledge that you have read and understood this Privacy Policy and agree to the collection and use of information as described herein."
